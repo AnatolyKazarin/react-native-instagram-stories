@@ -46,7 +46,7 @@ const StoryAvatar: FC<StoryAvatarProps> = ({
           />
         </TouchableOpacity>
       </View>
-      {Boolean(showName) && (
+      {Boolean(name && showName) && (
         <View style={nameViewStyle}>
           <Text style={nameTextStyle}>{name}</Text>
         </View>

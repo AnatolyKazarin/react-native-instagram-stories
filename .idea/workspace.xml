@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56706681-200a-410a-8d09-73ad0c9ebf71" name="Changes" comment="feat: name props for banner">
+    <list default="true" id="56706681-200a-410a-8d09-73ad0c9ebf71" name="Changes" comment="v1.0.3">
+      <change beforePath="$PROJECT_DIR$/.husky/commit-msg" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/commit-msg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/InstagramStories/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InstagramStories/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/List/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Progress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Progress/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/dto/componentsDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dto/componentsDTO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/dto/instagramStoriesDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/dto/instagramStoriesDTO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
       <updated>1710774206865</updated>
       <workItem from="1710774208238" duration="2397000" />
       <workItem from="1710796271360" duration="2064000" />
-      <workItem from="1710962943023" duration="2925000" />
+      <workItem from="1710962943023" duration="5083000" />
     </task>
     <task id="LOCAL-00001" summary="feat: name View Style">
       <created>1710796112966</created>
@@ -87,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710963052088</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: full screen">
+      <created>1710966978140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710966978140</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +118,8 @@
     <MESSAGE value="feat: name View Style" />
     <MESSAGE value="delete npm package lock" />
     <MESSAGE value="feat: name props for banner" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: name props for banner" />
+    <MESSAGE value="feat: full screen" />
+    <MESSAGE value="v1.0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0.3" />
   </component>
 </project>

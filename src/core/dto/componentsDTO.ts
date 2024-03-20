@@ -36,7 +36,6 @@ export interface StoryModalProps {
   closeIconColor: string;
   progressActiveColor?: string;
   progressColor?: string;
-  progressStyle?: ViewStyle
   modalAnimationDuration?: number;
   mediaContainerStyle?: ViewStyle;
   imageStyles?: ImageStyle;
@@ -95,7 +94,6 @@ export interface StoryProgressProps {
   length: number;
   progressActiveColor?: string;
   progressColor?: string;
-  progressStyle?: ViewStyle
 }
 
 export interface StoryProgressItemProps extends Omit<StoryProgressProps, 'length'> {
@@ -133,7 +131,6 @@ export interface StoryListProps extends InstagramStoryProps, StoryHeaderProps {
   videoProps?: any;
   progressActiveColor?: string;
   progressColor?: string;
-  progressStyle?: ViewStyle;
   mediaContainerStyle?: ViewStyle;
   imageStyles?: ImageStyle;
   imageProps?: ImageProps;

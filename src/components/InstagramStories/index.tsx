@@ -37,7 +37,6 @@ const InstagramStories = forwardRef<InstagramStoriesPublicMethods, InstagramStor
       nameViewStyle,
       videoAnimationMaxDuration,
       videoProps,
-        progressStyle,
       closeIconColor = CLOSE_COLOR,
       ...props
     },
@@ -206,7 +205,6 @@ const InstagramStories = forwardRef<InstagramStoriesPublicMethods, InstagramStor
           videoDuration={videoAnimationMaxDuration}
           videoProps={videoProps}
           closeIconColor={closeIconColor}
-          progressStyle={progressStyle}
           {...props}
         />
       </>

@@ -19,7 +19,7 @@ import Close from "../../../src/components/Icon/close";
 const StoryModal = forwardRef<StoryModalPublicMethods, StoryModalProps>( ( {
   stories, seenStories, duration, videoDuration, storyAvatarSize, textStyle, containerStyle,
   backgroundColor, videoProps, closeIconColor, modalAnimationDuration = 800, onLoad, onShow, onHide,
-  onSeenStoriesChange, onSwipeUp, onStoryStart, onStoryEnd, progressStyle, ...props
+  onSeenStoriesChange, onSwipeUp, onStoryStart, onStoryEnd, ...props
 }, ref ) => {
 
   const [ visible, setVisible ] = useState( false );
@@ -435,7 +435,6 @@ const StoryModal = forwardRef<StoryModalPublicMethods, StoryModalProps>( ( {
                   videoProps={videoProps}
                   closeColor={closeIconColor}
                   key={story.id}
-                  progressStyle={progressStyle}
                   {...props}
                 />
               ) )}
@@ -443,7 +442,7 @@ const StoryModal = forwardRef<StoryModalPublicMethods, StoryModalProps>( ( {
                   onPress={onClose}
                   hitSlop={30}
                   testID="storyCloseButton"
-                  style={{position: 'absolute', top: (progressStyle?.top ?? 0) + 115, right: 30, zIndex: 4}}
+                  style={{position: 'absolute', top: 35, right: 30, zIndex: 4}}
               >
                 <Close color={'white'} />
               </TouchableOpacity>

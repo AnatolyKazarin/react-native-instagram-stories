@@ -7,7 +7,7 @@ import { StoryProgressProps } from '../../core/dto/componentsDTO';
 
 const Progress: FC<StoryProgressProps> = ( {
   progress, active, activeStory, length,
-  progressActiveColor, progressColor,
+  progressActiveColor, progressColor, progressStyle
 } ) => {
 
   const width = ( (
@@ -15,7 +15,7 @@ const Progress: FC<StoryProgressProps> = ( {
     * ProgressStyles.container.gap ) / length;
 
   return (
-    <View style={[ ProgressStyles.container, { width: WIDTH } ]}>
+    <View style={[ ProgressStyles.container, { width: WIDTH }, progressStyle ]}>
       {[ ...Array( length ).keys() ].map( ( val ) => (
         <ProgressItem
           active={active}

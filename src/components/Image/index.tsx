@@ -1,4 +1,4 @@
-import { Image, View } from 'react-native';
+import { Image, View, SafeAreaView, BackgroundImage } from 'react-native';
 import React, { FC, memo, useState } from 'react';
 import {
   runOnJS, useAnimatedReaction, useDerivedValue, useSharedValue,
@@ -8,9 +8,10 @@ import Loader from '../Loader';
 import { HEIGHT, LOADER_COLORS, WIDTH } from '../../core/constants';
 import ImageStyles from './Image.styles';
 import StoryVideo from './video';
+import {LinearGradient} from 'expo-linear-gradient';
 
 const StoryImage: FC<StoryImageProps> = ( {
-  stories, activeStory, defaultImage, isDefaultVideo, paused, videoProps, isActive,
+  children, stories, activeStory, defaultImage, isDefaultVideo, paused, videoProps, isActive,
   mediaContainerStyle, imageStyles, imageProps, onImageLayout, onLoad,
 } ) => {
 
@@ -111,15 +112,24 @@ const StoryImage: FC<StoryImageProps> = ( {
               {...videoProps}
             />
           ) : (
-            <Image
+            <BackgroundImage
               source={{ uri: data.uri }}
-              style={[ { width: WIDTH, aspectRatio: 0.5626 }, imageStyles ]}
-              resizeMode="contain"
+              style={[ {flex: 1, width: WIDTH, aspectRatio: 0.5626 }, imageStyles ]}
               testID="storyImageComponent"
               onLayout={( e ) => onImageLayout( Math.min( HEIGHT, e.nativeEvent.layout.height ) )}
               onLoad={() => onContentLoad()}
               {...imageProps}
-            />
+            >
+              <LinearGradient
+                  colors={['transparent', 'rgba(0,0,0,1)']}
+                  locations={[0, 0.8]}
+                  style={{width: WIDTH, flex: 1}}>
+                <SafeAreaView style={{flex: 1}}>
+                  {children}
+                </SafeAreaView>
+              </LinearGradient>
+            </BackgroundImage>
+
           )
         )}
       </View>

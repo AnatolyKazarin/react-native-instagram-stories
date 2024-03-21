@@ -1,6 +1,6 @@
 {
   "name": "@anatolyk/react-native-instagram-stories",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A versatile and captivating React Native component that empowers developers to seamlessly integrate Instagram-style stories into their mobile applications, fostering an engaging and interactive user experience.",
   "main": "src/index.tsx",
   "source": "src/index.tsx",
@@ -37,7 +37,8 @@
     "react-native": ">=0.70.0",
     "react-native-gesture-handler": ">=2.10.0",
     "react-native-reanimated": ">=2.12.0",
-    "react-native-svg": ">=13.6.0"
+    "react-native-svg": ">=13.6.0",
+    "expo-linear-gradient": ">=12.7.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.9",

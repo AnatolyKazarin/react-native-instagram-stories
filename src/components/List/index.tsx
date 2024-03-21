@@ -51,16 +51,18 @@ const StoryList: FC<StoryListProps> = ( {
           mediaContainerStyle={mediaContainerStyle}
           imageStyles={imageStyles}
           imageProps={imageProps}
-        />
-        <Progress
-          active={isActive}
-          activeStory={activeStoryIndex}
-          progress={progress}
-          length={stories.length}
-          progressColor={progressColor}
-          progressActiveColor={progressActiveColor}
-        />
-        <StoryContent stories={stories} active={isActive} activeStory={activeStory} />
+        >
+          <Progress
+            active={isActive}
+            activeStory={activeStoryIndex}
+            progress={progress}
+            length={stories.length}
+            progressColor={progressColor}
+            progressActiveColor={progressActiveColor}
+          />
+          <StoryHeader {...props} />
+          <StoryContent stories={stories} active={isActive} activeStory={activeStory} />
+        </StoryImage>
       </Animated.View>
       <StoryFooter stories={stories} active={isActive} activeStory={activeStory} />
     </StoryAnimation>

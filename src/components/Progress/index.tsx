@@ -10,9 +10,7 @@ const Progress: FC<StoryProgressProps> = ( {
   progressActiveColor, progressColor
 } ) => {
 
-  const width = ( (
-    WIDTH - ProgressStyles.container.left * 2 ) - ( length - 1 )
-    * ProgressStyles.container.gap ) / length;
+  const width = ( (WIDTH - 32) - ( length - 1 ) * ProgressStyles.container.gap ) / length;
 
   return (
     <View style={[ ProgressStyles.container, { width: WIDTH } ]}>

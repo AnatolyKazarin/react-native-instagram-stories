@@ -2,12 +2,11 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create( {
   container: {
-    position: 'absolute',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    left: 16,
-    top: 32,
+    marginLeft: 16,
+    marginTop: 16
   },
   left: {
     flexDirection: 'row',

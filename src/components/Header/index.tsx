@@ -12,17 +12,17 @@ const StoryHeader: FC<StoryHeaderProps> = ( {
 } ) => {
 
   const styles = { width: avatarSize, height: avatarSize, borderRadius: avatarSize };
-  const width = WIDTH - HeaderStyles.container.left * 2;
+  const width = WIDTH - 16 * 2;
 
   return (
     <View style={[ HeaderStyles.container, { width } ]}>
       <View style={HeaderStyles.left}>
-        {Boolean( imgUrl ) && (
-          <View style={[ HeaderStyles.avatar, { borderRadius: styles.borderRadius } ]}>
-            <Image source={{ uri: imgUrl }} style={styles} />
-          </View>
-        )}
-        {Boolean( name ) && <Text style={textStyle}>{name}</Text>}
+        {/*{Boolean( imgUrl ) && (*/}
+        {/*  <View style={[ HeaderStyles.avatar, { borderRadius: styles.borderRadius } ]}>*/}
+        {/*    <Image source={{ uri: imgUrl }} style={styles} />*/}
+        {/*  </View>*/}
+        {/*)}*/}
+        {/*{Boolean( name ) && <Text style={textStyle}>{name}</Text>}*/}
       </View>
       <TouchableOpacity
         onPress={onClose}

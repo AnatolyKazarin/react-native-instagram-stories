@@ -1,4 +1,4 @@
-import { Image, View, SafeAreaView, BackgroundImage } from 'react-native';
+import { Image, View, SafeAreaView, ImageBackground } from 'react-native';
 import React, { FC, memo, useState } from 'react';
 import {
   runOnJS, useAnimatedReaction, useDerivedValue, useSharedValue,
@@ -96,23 +96,7 @@ const StoryImage: FC<StoryImageProps> = ( {
   };
 
   return (
-    <>
-      <View style={ImageStyles.container}>
-        <Loader loading={loading} color={color} size={50} />
-      </View>
-      <View style={[ ImageStyles.image, mediaContainerStyle ]}>
-        {data.uri && (
-          data.isVideo ? (
-            <StoryVideo
-              onLoad={onContentLoad}
-              onLayout={onImageLayout}
-              uri={data.uri}
-              paused={isPaused}
-              isActive={isActive}
-              {...videoProps}
-            />
-          ) : (
-            <BackgroundImage
+            <ImageBackground
               source={{ uri: data.uri }}
               style={[ {flex: 1, width: WIDTH, aspectRatio: 0.5626 }, imageStyles ]}
               testID="storyImageComponent"
@@ -128,12 +112,7 @@ const StoryImage: FC<StoryImageProps> = ( {
                   {children}
                 </SafeAreaView>
               </LinearGradient>
-            </BackgroundImage>
-
-          )
-        )}
-      </View>
-    </>
+            </ImageBackground>
   );
 
 };

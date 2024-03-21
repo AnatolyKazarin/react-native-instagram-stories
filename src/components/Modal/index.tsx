@@ -1,7 +1,7 @@
 import React, {
   forwardRef, memo, useEffect, useImperativeHandle, useState,
 } from 'react';
-import { GestureResponderEvent, Modal, Pressable, TouchableOpacity } from 'react-native';
+import { GestureResponderEvent, Modal, Pressable } from 'react-native';
 import Animated, {
   cancelAnimation, interpolate, runOnJS, useAnimatedGestureHandler, useAnimatedReaction,
   useAnimatedStyle,
@@ -14,7 +14,6 @@ import { GestureContext, StoryModalProps, StoryModalPublicMethods } from '../../
 import GestureHandler from './gesture';
 import StoryList from '../List';
 import ModalStyles from './Modal.styles';
-import Close from "../../../src/components/Icon/close";
 
 const StoryModal = forwardRef<StoryModalPublicMethods, StoryModalProps>( ( {
   stories, seenStories, duration, videoDuration, storyAvatarSize, textStyle, containerStyle,
@@ -438,14 +437,6 @@ const StoryModal = forwardRef<StoryModalPublicMethods, StoryModalProps>( ( {
                   {...props}
                 />
               ) )}
-              <TouchableOpacity
-                  onPress={onClose}
-                  hitSlop={30}
-                  testID="storyCloseButton"
-                  style={{position: 'absolute', top: 35, right: 30, zIndex: 4}}
-              >
-                <Close color={'white'} />
-              </TouchableOpacity>
             </Animated.View>
           </Pressable>
         </Animated.View>
